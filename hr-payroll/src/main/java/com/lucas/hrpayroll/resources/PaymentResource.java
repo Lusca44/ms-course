@@ -1,4 +1,4 @@
-package com.lucas.hrpayroll.services;
+package com.lucas.hrpayroll.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lucas.hrpayroll.entities.Payment;
+import com.lucas.hrpayroll.services.PaymentService;
 
 @RestController
 @RequestMapping(value = "/payments")
