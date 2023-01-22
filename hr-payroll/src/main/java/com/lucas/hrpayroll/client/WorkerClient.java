@@ -13,16 +13,16 @@ import com.lucas.hrpayroll.entities.Worker;
 @Component
 public class WorkerClient {
 
-	@Value("${hr-worker.host}")
-	private String workerHost;
+	//@Value("${hr-worker.host}")
+	//private String workerHost;
 	
 	@Autowired
 	private RestTemplate restTemplate;
 
-	public Worker getWorkerById(Long workerId) {
-		Map<String, String> uriVariables = new HashMap<>();
-		uriVariables.put("id", String.valueOf(workerId));
-		return restTemplate.getForObject(workerHost + "/workers/{id}", Worker.class, uriVariables);
-	}
+	//public Worker getWorkerById(Long workerId) {
+		//Map<String, String> uriVariables = new HashMap<>();
+		//uriVariables.put("id", String.valueOf(workerId));
+		//return restTemplate.getForObject(workerHost + "/workers/{id}", Worker.class, uriVariables);
+	//}
 	
 }

@@ -1,19 +1,18 @@
-package com.lucas.hrpayroll.entities;
+package com.lucas.hrpayroll.dtos;
 
 import java.io.Serializable;
-import com.lucas.hrpayroll.dtos.WorkerDTO;
 
-public class Worker implements Serializable {
+public class WorkerDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	private Long id;
 	private String name;
 	private Double dailyIncome;
-
-	public Worker() {
+	
+	public WorkerDTO() {
 	}
 
-	public Worker(Long id, String name, Double dailyIncome) {
+	public WorkerDTO(Long id, String name, Double dailyIncome) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -22,6 +21,10 @@ public class Worker implements Serializable {
 
 	public Long getId() {
 		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -38,13 +41,5 @@ public class Worker implements Serializable {
 
 	public void setDailyIncome(Double dailyIncome) {
 		this.dailyIncome = dailyIncome;
-	}
-	
-	public WorkerDTO toDTO() {
-		return new WorkerDTO(this.id, this.name, this.dailyIncome);
-	}
-	
-	public Worker fromDTO(WorkerDTO dto) {
-		return new Worker(dto.getId(),dto.getName(),dto.getDailyIncome());
 	}
 }
